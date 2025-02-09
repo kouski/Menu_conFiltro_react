@@ -1,10 +1,14 @@
 
 
-export default function Categories({categories}) {
+export default function Categories({categories,filterItems}) {
+
+
+
+
   return (
     <div className="btn-container">
         {categories.map(category=>{
-            return <button type="button" className="btn" key={category}>{category}</button>
+            return <button onClick={()=>filterItems(category)} type="button" className="btn" key={category}>{category}</button>
         })}
         
         </div>
